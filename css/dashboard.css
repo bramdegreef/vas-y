@@ -1,0 +1,131 @@
+body {
+    height: 100%;
+    color: black;
+    background-color: lightgray;
+}
+
+#formTitle {
+    font-size: 2em;
+    color: darkslategrey;
+    margin: 0;
+}
+
+.carouselPicture {
+    max-height: calc(100vh - 52px);
+    width: 100%;
+}
+
+#signup-form {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 52px;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    padding: 2em;
+    background-color: rgba(160, 160, 160, 0.6);
+}
+
+.modal-dialog {
+    margin-top: 80px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: rebeccapurple;
+    border-radius: 0px;
+}
+
+.navbar-brand{
+    font-family: serif;
+    font-size: 3em;
+}
+
+.navbar-default {
+    border-color: rebeccapurple;
+}
+
+.navbar-nav>.active>a {
+    background-color: purple;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: white;
+}
+
+.homeText {
+    z-index: 2;
+    font-size: 1.8em;
+    position: absolute;
+    display: inline-block;
+    color: white;
+    background-color: rgba(152, 106, 157, 0.8);
+    max-width: 40%;
+    top: 15%;
+    left: 5%;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+#login-form {
+    z-index: 3;
+    position: fixed;
+    right: 10%;
+    top: 10%;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    padding: 2em;
+    background-color: rgba(160, 160, 160, 0.6);
+}
+
+.navbarDashboard{
+    display: block;
+}
+
+.navbarDashboard li:hover{
+    background-color: rgb(133,72,193);
+}
+
+
+/*
+*
+*   Media queries
+*
+*/
+
+@media screen and (max-width: 768px) {
+    .homeText {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        min-width: 100%;
+    }
+    
+    #homeTextDiv{
+        background-color: rgb(152, 106, 157);
+        height: 20%;
+    }
+    
+    #login-form {
+        display: none;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        right: 0;
+        top: 0;
+        padding: 5px;
+    }
+        
+}
