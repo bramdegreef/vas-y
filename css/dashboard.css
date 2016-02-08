@@ -138,27 +138,42 @@ h1{
 */
 
 @media screen and (max-width: 768px) {
-    .homeText {
-        font-size: 1.2em;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        min-width: 100%;
-    }
-    
-    #homeTextDiv{
-        background-color: rgb(152, 106, 157);
-        height: 20%;
-    }
-    
-    #login-form {
-        display: none;
-        position: relative;
+
+    #leftDash{
+        height: auto;
         width: 100%;
-        margin: 0;
-        right: 0;
-        top: 0;
-        padding: 5px;
+        box-shadow: none;
+    }
+    
+    #leftDash ul{
+        height: 1.7em;
+        width: 100%;
+        padding: 0;
+    }
+    
+    #leftDash ul li{
+        float: left;
+        list-style: none;
+        display: block;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+        border-color: gray;
+        width: calc(100%/3);
+        background-color: dimgray;
+    }
+    
+    #leftDash a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    #leftDash ul li:hover{
+        background-color: gray;
+    }
+    
+    #rightDash{
+        width: 100%;
     }
         
 }
