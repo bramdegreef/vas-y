@@ -28,6 +28,16 @@
             }
             showNextQuote();
 
+
+            /**Leerkrachtoptie wordt aangevinkt**/
+            $("#leerkrachtCheckbox").change(function () {
+                if (this.checked) {
+                    $("#leerkrachtOption").slideDown();
+                } else {
+                    $("#leerkrachtOption").slideUp();
+                }
+            });
+
         });
     </script>
 </head>
@@ -203,6 +213,29 @@ niet afging.” </span>
                         <div class="form-group">
                             <label for="pwd">Paswoord:</label>
                             <input type="password" class="form-control" id="pwd" placeholder="Vul je paswoord in">
+                        </div>
+                        <div class="form-group">
+                            <label for="school">School:</label>
+                            <select id="school">
+                                <option selected hidden>Kies een school</option>
+                                <option value="volvo">School 1</option>
+                                <option value="saab">School 2</option>
+                                <option value="opel">School 3</option>
+                                <option value="audi">School 4</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="checkbox" id="leerkrachtCheckbox">
+                            <label for="leerkrachtCheckbox"> Ik ben leerkracht
+                            </label>
+                            <div id="leerkrachtOption">
+                                <div class="form-group">
+                                    Vul de code voor leerkrachten in:
+                                    <br>
+                                    <input type="text">
+                                </div>
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-default btn-success">Maak een nieuwe account</button>
                     </form>

@@ -28,6 +28,10 @@ body {
     background-color: rgba(160, 160, 160, 0.6);
 }
 
+#leerkrachtOption{
+    display: none;
+}
+
 .modal-dialog {
     margin-top: 80px;
 }
