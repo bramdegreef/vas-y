@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/loginSignup.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 
@@ -69,13 +70,16 @@
                             </div>
                             <div class="form-group">
                                 <label for="pwd">Paswoord:</label>
-                                <input type="password" class="form-control" id="pwd">
+                                <input type="password" class="form-control" id="password">
                             </div>
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox">Onthoud mij</label>
                             </div>
-                            <a href="dashboard" class="btn btn-default" role="button">Login</a>
+                            <input id="loginbtn" onclick="tryLogin()" type="button" name="loginInfo" value="Login" class="btn btn-default">
+                            <br>
+                            <p id="statusLogin"></p>
+
                             <!--<button type="submit" class="btn btn-default">Login</button>-->
                         </form>
                     </div>
@@ -90,7 +94,7 @@
             </div>
         </div>
     </nav>
-        
+
     <div id="homeTextDiv">
         <span id="homeText1" class="homeText">“Het is leuk, want de tutor is lief en ze zorgt dat ik
 de leerstof beter begrijp en ze moedigt me aan,
@@ -139,7 +143,7 @@ niet afging.” </span>
             </div>
         </div>
     </div>
-    
+
     <div id="backgroundSite">
         <h1 style="text-align: center">Vas-y</h1>
     </div>
@@ -194,38 +198,38 @@ niet afging.” </span>
                     <form role="form">
                         <div class="form-group">
                             <label for="email">Voornaam:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Vul je voornaam in">
+                            <input type="text" class="form-control" id="firstnameSignup" placeholder="Vul je voornaam in">
                         </div>
                         <div class="form-group">
                             <label for="email">Familienaam:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Vul je familienaam in">
+                            <input type="text" class="form-control" id="lastnameSignup" placeholder="Vul je familienaam in">
                         </div>
                         <div class="form-group">
                             <label>Geslacht:</label>
                             <br>
                             <label class="radio-inline">
-                                <input type="radio" name="geslacht">Man
+                                <input type="radio" name="geslacht" id="Man">Man
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="geslacht">Vrouw
+                                <input type="radio" name="geslacht" id="Vrouw">Vrouw
                             </label>
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Vul je e-mailadres in">
+                            <input type="email" class="form-control" id="emailSignup" placeholder="Vul je e-mailadres in">
                         </div>
                         <div class="form-group">
                             <label for="pwd">Paswoord:</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Vul je paswoord in">
+                            <input type="password" class="form-control" id="passwordSignup" placeholder="Vul je paswoord in">
                         </div>
                         <div class="form-group">
                             <label for="school">School:</label>
-                            <select id="school">
+                            <select id="schoolSignup">
                                 <option selected hidden>Kies een school</option>
-                                <option value="volvo">School 1</option>
-                                <option value="saab">School 2</option>
-                                <option value="opel">School 3</option>
-                                <option value="audi">School 4</option>
+                                <option value="School1">School 1</option>
+                                <option value="School2">School 2</option>
+                                <option value="School3">School 3</option>
+                                <option value="School4">School 4</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -240,7 +244,8 @@ niet afging.” </span>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-default btn-success">Maak een nieuwe account</button>
+                        <input type="button" id="signupbtn" onclick="signup(); return false" class="btn btn-default btn-success" value="Maak een nieuwe account" />
+                        <p id="statusSignup"></p>
                     </form>
                 </div>
                 <div class="modal-footer">

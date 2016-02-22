@@ -22,11 +22,11 @@ if(isset($_POST["e"])){
         exit();
 	} else {
 	// END FORM DATA ERROR HANDLING
-		$sql = "SELECT id, username, password FROM users WHERE email='$e' AND activated='1' LIMIT 1";
+		$sql = "SELECT id, email, password FROM Leerlingen WHERE email='$e' LIMIT 1";
         $query = mysqli_query($db_conx, $sql);
         $row = mysqli_fetch_row($query);
 		$db_id = $row[0];
-		$db_username = $row[1];
+		$db_email = $row[1];
         $db_pass_str = $row[2];
 		if($p != $db_pass_str){
 			echo "login_failed";
@@ -34,15 +34,15 @@ if(isset($_POST["e"])){
 		} else {
 			// CREATE THEIR SESSIONS AND COOKIES
 			$_SESSION['userid'] = $db_id;
-			$_SESSION['username'] = $db_username;
+			$_SESSION['email'] = $db_email;
 			$_SESSION['password'] = $db_pass_str;
 			setcookie("id", $db_id, strtotime( '+30 days' ), "/", "", "", TRUE);
-			setcookie("user", $db_username, strtotime( '+30 days' ), "/", "", "", TRUE);
+			setcookie("email", $db_email, strtotime( '+30 days' ), "/", "", "", TRUE);
     		setcookie("pass", $db_pass_str, strtotime( '+30 days' ), "/", "", "", TRUE); 
 			// UPDATE THEIR "IP" AND "LASTLOGIN" FIELDS
-			$sql = "UPDATE users SET ip='$ip', lastlogin=now() WHERE username='$db_username' LIMIT 1";
+			$sql = "UPDATE Leerlingen SET ip='$ip', lastlogin=now() WHERE email='$db_email' LIMIT 1";
             $query = mysqli_query($db_conx, $sql);
-			echo $db_username;
+			echo $db_email;
 		    exit();
 		}
 	}

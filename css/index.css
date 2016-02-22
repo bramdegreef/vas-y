@@ -1,22 +1,29 @@
 body {
     height: 100%;
+    margin: 0;
+    padding: 0;
     color: black;
     background-color: rgb(45, 45, 45);
 }
 
-#backgroundSite{
-    height: 36vh;
+#backgroundSite {
+    height: calc(100vh);
+    width: 100%;
     background-color: black;
-    background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
     border-top: solid;
     border-color: dimgray;
     border-width: 0.2em;
-    margin-top: 1em;
 }
 
-h1{
+h1 {
     font-size: 3.5em;
     color: white;
+}
+
+#statusSignup{
+    color: red;
+    font-style: bold;
 }
 
 #formTitle {
@@ -25,10 +32,16 @@ h1{
     margin: 0;
 }
 
-.carouselPicture {
+#myCarousel {
+
     position: relative;
-    max-height: calc(75vh - 52px);
-    width: 75%;
+    left: 12.5%;
+    width: 50%;
+    max-height: 50%;
+}
+
+#myCarousel img {
+    left: 50%
 }
 
 #signup-form {
@@ -44,7 +57,7 @@ h1{
     background-color: rgba(160, 160, 160, 0.6);
 }
 
-#leerkrachtOption{
+#leerkrachtOption {
     display: none;
 }
 
@@ -58,7 +71,7 @@ h1{
     border-radius: 0px;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-family: serif;
     font-size: 3em;
 }
@@ -84,29 +97,29 @@ h1{
 }
 
 .homeText {
+    text-align: center;
     z-index: 2;
-    font-size: 1.5em;
-    position: absolute;
+    font-size: 1.4em;
     display: inline-block;
     color: white;
     background-color: rgba(152, 106, 157, 0.8);
-    max-width: 40%;
-    top: 10%;
-    left: 3%;
+    width: 75%;
+    min-height: 6.5em;
+    top: 50%;
+    left: 15%;
     border-radius: 5px;
     padding: 1em;
 }
 
 #login-form {
+    display: table;
     z-index: 3;
     position: absolute;
     right: 0%;
     top: 52px;
     width: 25%;
-    border-color: white;
-    border-width: 3px;
-    border-style: solid;
     padding: 2em;
+    min-height: 100%;
     background-color: rgba(160, 160, 160, 0.6);
 }
 
@@ -119,18 +132,16 @@ h1{
 
 @media screen and (max-width: 768px) {
     .homeText {
-        font-size: 1.2em;
+        font-size: 1em;
         margin: 0;
         padding: 0;
         position: relative;
         min-width: 100%;
     }
-    
-    #homeTextDiv{
+    #homeTextDiv {
         background-color: rgb(152, 106, 157);
         height: 20%;
     }
-    
     #login-form {
         display: none;
         position: relative;
@@ -140,5 +151,4 @@ h1{
         top: 0;
         padding: 5px;
     }
-        
 }
