@@ -1,0 +1,244 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: rgb(30, 30, 30);
+}
+
+h1 {
+    font-size: 3.5em;
+    color: black;
+    width: 50%;
+    margin: auto;
+    border-bottom: solid;
+    border-color: gray;
+    border-style: none none solid none;
+    border-width: 1px;
+    padding-bottom: 0.5em;
+    padding-top: 0.8em;
+    margin-bottom: 5%;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 5%;
+}
+
+h3{
+    color: white;
+    display: table;
+    text-align: center;
+    width: auto; 
+    margin: auto;
+}
+
+#statusSignup, #statusLogin {
+    color: red;
+    font-style: bold;
+}
+
+#formTitle {
+    font-size: 2em;
+    color: rebeccapurple;
+    margin: 0;
+}
+
+#myCarousel {
+    margin: auto;
+    margin-top: 2em;
+    width: 50%;
+    max-height: 50%;
+}
+
+#myCarousel img {
+    left: 50%
+}
+
+#signup-form {
+    z-index: 9999;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 52px;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    padding: 2em;
+    background-color: rgba(160, 160, 160, 0.6);
+}
+
+#leerkrachtOption {
+    display: none;
+}
+
+.modal-dialog {
+    margin-top: 80px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: rebeccapurple;
+    border-radius: 0px;
+}
+
+.navbar-brand {
+    font-family: serif;
+    font-size: 3em;
+}
+
+.navbar-default {
+    border-color: rebeccapurple;
+}
+
+.navbar-nav>.active>a {
+    background-color: purple;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: white;
+}
+
+#homeTextDiv {
+    text-align: center;
+    z-index: 2;
+    font-size: 1.4em;
+    display: inline-block;
+    color: white;
+    background-color: rgba(152, 106, 157, 0.8);
+    width: 100%;
+    min-height: 7em;
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.homeText {
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+}
+
+#login-form {
+    display: table;
+    z-index: 3;
+    position: fixed;
+    right: 0%;
+    top: calc(52px + 25vh);
+    max-width: 25%;
+    padding: 2em;
+    background-color: rgba(160, 160, 160, 0.6);
+    border: solid 2px white;
+    border-style: solid none solid solid;
+}
+
+.infoBox {
+    display: inline-block;
+    text-align: center;
+    padding: 0.5em;
+    width: 25%;
+    background-color: rgba(45, 45, 45, 0.2);
+    display: inline-block;
+    margin: 2%;
+}
+
+.infoBox img {
+    height: 100%;
+    width: 100%;
+}
+
+#infoBoxContainer{
+    margin-top: 15%;
+    position: relative;
+    text-align: center;
+    background: lightgray;
+    border-width: 2px 0 2px 0;
+    border-style: solid;
+    border-color: gray;
+    box-shadow: 0px 8px 20px #888, 0px -8px 20px #888;
+    padding: 0.5em;
+}
+
+#indexRight {
+    margin-top: 10%;
+    padding: 0.5em;
+    height: 100vh;
+    color: white;
+    background-color: darkgreen;
+}
+
+.container {
+    margin: auto;
+    width: 60%;
+    background-color: white;
+    min-height: 100vh;
+    
+    min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -5em; /* the bottom margin is the negative value of the footer's height */
+    padding: 0;
+}
+
+.margin-sides{
+    margin: 0 2em;
+}
+
+.footer, .push{
+    width: 60%;
+    margin: auto;
+    margin-top: 5em;
+    height: 5em;
+    background-color: dimgray;
+}
+
+.footer p{
+    text-align: center;
+    color: white;
+}
+
+.footercolumn{
+    border-style: none solid none solid;
+    border-width: 1px;
+    border-color: rebeccapurple;
+    text-align: center;
+}
+
+
+/*
+*
+*   Media queries
+*
+*/
+
+@media screen and (max-width: 768px) {
+    .homeText {
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        min-width: 100%;
+    }
+    #homeTextDiv {
+        background-color: rgb(152, 106, 157);
+        height: 20%;
+    }
+    #login-form {
+        display: none;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        right: 0;
+        top: 0;
+        padding: 5px;
+    }
+}

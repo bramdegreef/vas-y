@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vas-y</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/loginSignup.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/index3.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            /**Fade in home texts**/
+            $(".homeText").css("display", "none");
+
+            var quotes = $(".homeText");
+            var quoteIndex = -1;
+
+            function showNextQuote() {
+                ++quoteIndex;
+                quotes.eq(quoteIndex % quotes.length)
+                    .fadeIn(1000)
+                    .delay(8000)
+                    .fadeOut(1000, showNextQuote);
+            }
+            showNextQuote();
+
+
+            /**Leerkrachtoptie wordt aangevinkt**/
+            $("#leerkrachtCheckbox").change(function () {
+                if (this.checked) {
+                    $("#leerkrachtOption").slideDown();
+                } else {
+                    $("#leerkrachtOption").slideUp();
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <!--Nav bar-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Vas-y</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <!--
+                    <div id="login-form">
+                        <form role="form">
+                            <div class="form-group">
+                                <span id="formTitle">Login:</span>
+                                <br>
+                                <label for="email">E-mail:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Paswoord:</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">Onthoud mij</label>
+                            </div>
+                            <input id="loginbtn" onclick="tryLogin()" type="button" name="loginInfo" value="Login" class="btn btn-default">
+                            <br>
+                            <p id="statusLogin"></p>
+                        </form>
+                    </div>-->
+                    <li><a href="leerling.html">Leerling</a></li>
+                    <li><a href="ouders.html">Ouder</a></li>
+                    <li><a href="#">Leerkrachten/Tutoren</a></li>
+                    <li><a href="school.html">Scholen</a></li>
+                    <li><a href="#">Medewerker</a></li>
+
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                    <li><a data-toggle="modal" data-target="#signupModal"><span class="glyphicon glyphicon-hand-right"></span> Nog geen lid?</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align: center">Vas-y</h1>
+        <p class="margin-sides">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+    </div>
+    <div class="container">
+        <div id="infoBoxContainer">
+            <h2>Titel</h2>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+            <div id="tutor" class="infoBox">
+                <h3>Tutor</h3>
+                <img src="img/tutor.png">
+            </div>
+            <div id="tutee" class="infoBox">
+                <h3>Tutee</h3>
+                <img src="img/tutee.png">
+            </div>
+            <div id="parent" class="infoBox">
+                <h3>Parent</h3>
+                <img src="img/parent.png">
+            </div>
+        </div>
+
+        <!--Carousel-->
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/foto1.jpeg" alt="Foto 1" class="carouselPicture">
+                </div>
+
+                <div class="item">
+                    <img src="img/foto2.jpg" alt="Foto 2" class="carouselPicture">
+                </div>
+
+                <div class="item">
+                    <img src="img/foto3.jpg" alt="Foto 3" class="carouselPicture">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div id="homeTextDiv">
+            <span id="homeText1" class="homeText">“Het is leuk, want de tutor is lief en ze zorgt dat ik
+de leerstof beter begrijp en ze moedigt me aan,
+waardoor ik beter weet hoe het moet. En als je
+beter weet hoe het moet, maak je je huiswerk ook
+veel liever."</span>
+
+            <span id="homeText2" class="homeText">“Ik vind het goed dat de tutor steeds zegt
+dat het niet erg is om een fout te maken en dat
+de sessies er zijn om te leren. Nu durf ik dat
+ook zeggen als ik iets niet begrijp.” </span>
+
+            <span class="homeText">“Ik heb geleerd om eerst in mijn agenda te kijken voor ik met
+huiswerk start, want daarvoor las ik die soms niet zo goed. Ik wist
+niet hoe ik aan studeren moest beginnen, en mijn mentor heeft me
+daarbij geholpen.”</span>
+
+            <span class="homeText">“Mijn mentor is super! Ik kon
+haar alles zeggen, als iets me
+niet afging.” </span>
+        </div>
+
+
+    </div>
+    <div class="push" />
+    <div class="footer">
+        <div class="row">
+            <div class="col-sm-4 footercolumn">
+                Kolom 1
+            </div>
+            <div class="col-sm-4 footercolumn">
+                Kolom 2
+            </div>
+            <div class="col-sm-4 footercolumn">
+                Kolom 3
+            </div>
+        </div>
+        <p>
+            <br>Copyright (c) 2016</p>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="formTitle">Login:</span>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Paswoord:</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">Onthoud mij</label>
+                        </div>
+                        <input id="loginbtn" onclick="tryLogin()" type="button" name="loginInfo" value="Login" class="btn btn-default">
+                        <br>
+                        <p id="statusLogin"></p>
+
+                        <!--<button type="submit" class="btn btn-default">Login</button>-->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluit venster</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="signupModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="formTitle">Nieuwe account:</span>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="email">Voornaam:</label>
+                            <input type="text" class="form-control" id="firstnameSignup" placeholder="Vul je voornaam in">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Familienaam:</label>
+                            <input type="text" class="form-control" id="lastnameSignup" placeholder="Vul je familienaam in">
+                        </div>
+                        <div class="form-group">
+                            <label>Geslacht:</label>
+                            <br>
+                            <label class="radio-inline">
+                                <input type="radio" name="geslacht" id="Man">Man
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="geslacht" id="Vrouw">Vrouw
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" class="form-control" id="emailSignup" placeholder="Vul je e-mailadres in">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Paswoord:</label>
+                            <input type="password" class="form-control" id="passwordSignup" placeholder="Vul je paswoord in">
+                        </div>
+                        <div class="form-group">
+                            <label for="school">School:</label>
+                            <select id="schoolSignup">
+                                <option selected hidden>Kies een school</option>
+                                <option value="School1">School 1</option>
+                                <option value="School2">School 2</option>
+                                <option value="School3">School 3</option>
+                                <option value="School4">School 4</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="checkbox" id="leerkrachtCheckbox">
+                            <label for="leerkrachtCheckbox"> Ik ben leerkracht</label>
+                            <div id="leerkrachtOption">
+                                <div class="form-group">
+                                    Vul de code voor leerkrachten in:
+                                    <br>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" id="signupbtn" onclick="signup(); return false" class="btn btn-default btn-success" value="Maak een nieuwe account" />
+                        <p id="statusSignup"></p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluit venster</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
