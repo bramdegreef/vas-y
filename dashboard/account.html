@@ -37,7 +37,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right navbarDashboard">
-                    <li><a href="berichten.html"><span class="glyphicon glyphicon-envelope"></span> Berichten</a>
+                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Berichten</a>
                     </li>
                     <li>
                         <a href="account.html"><img src="../img/user.png" class="img-circle" width="20" height="20"> Mijn account</a>
@@ -50,7 +50,6 @@
 
     <div class="row">
         <div class="col-sm-3" id="leftDash">
-            <h3 id="menuTitle">Menu:</h3>
             <ul id="menu">
                 <li><a href="#Overzicht">Overzicht</a></li>
                 <li><a href="#Bericht">Berichten</a></li>
@@ -62,39 +61,19 @@
         </div>
 
         <div class="col-sm-8" id="rightDash">
-            <h1>Dashboard:</h1>
+            <h1>Account-instellingen:</h1>
 
-            <div class="col-sm-3 pressedDiv" id="profileInfoDiv">
-                <img src="../img/user_student.png" class="img-circle" id="profilePic">
-                <p>Leerling X</p>
-                <p>School X</p>
-                <p>Klas X</p>
+            <div class="col-sm-11 pressedDiv">
+                <p><u>Profielfoto:</u> </p><img src="../img/user_student.png" <img src="../img/user_student.png" class="img-circle" id="profilePicInstellingen"><br><br><button>Pas profielfoto aan</button>
             </div>
-
-            <div class="pressedDiv rightPressedDiv col-sm-8" id="messagesDiv">
-                <b> Berichten</b> <span class="glyphicon glyphicon-envelope"></span>
-                <br>
-                <div id="messagesBox">
-                    Je hebt geen nieuwe berichten
-                </div>
+            
+            <div class="col-sm-11 pressedDiv">
+                <p><u>Email:</u> </p><span id="email-adres"><b>voorbeeldemail@hotmail.com</b></span><button class="float-right">Pas e-mail aan</button>
             </div>
-
-            <div class="pressedDiv col-sm-12">
-                <div class="tab-content">
-                    <div id="#Leerkracht">
-                        leerkracht
-                    </div>
-                    <div id="#Vak">
-                        vak
-                    </div>
-                    <div id="#School">
-                        scholen
-                    </div>
-                    <div id="#Les">
-                        overzicht lessen
-                    </div>
-                </div>
-            </div>
+            
+            <div class="col-sm-11 pressedDiv">
+                <p><u>Wachtwoord:</u> </p><b>********</b><button class="float-right">Pas wachtwoord aan</button>
+            </div>            
 
         </div>
     </div>

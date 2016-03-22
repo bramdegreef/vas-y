@@ -9,7 +9,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/loginSignup.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/index3.css" rel="stylesheet">
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -60,6 +60,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home</a></li>
+                    <!--
                     <div id="login-form">
                         <form role="form">
                             <div class="form-group">
@@ -79,16 +80,14 @@
                             <input id="loginbtn" onclick="tryLogin()" type="button" name="loginInfo" value="Login" class="btn btn-default">
                             <br>
                             <p id="statusLogin"></p>
-
-                            <!--<button type="submit" class="btn btn-default">Login</button>-->
                         </form>
-                    </div>
+                    </div>-->
                     <li><a href="leerling.html">Leerling</a></li>
                     <li><a href="ouders.html">Ouder</a></li>
                     <li><a href="#">Leerkrachten/Tutoren</a></li>
                     <li><a href="school.html">Scholen</a></li>
                     <li><a href="#">Medewerker</a></li>
-                    
+
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -99,58 +98,111 @@
         </div>
     </nav>
 
-    <div id="homeTextDiv">
-        <span id="homeText1" class="homeText">“Het is leuk, want de tutor is lief en ze zorgt dat ik
+    <div class="container">
+        <h1 style="text-align: center">Vas-y</h1>
+        <p class="margin-sides">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+    </div>
+    <div class="container">
+        <div id="infoBoxContainer">
+            <h2>Titel</h2>
+            <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+            <div id="tutor" class="infoBox">
+                <h3>Tutor</h3>
+                <img src="img/tutor.png">
+            </div>
+            <div id="tutee" class="infoBox">
+                <h3>Tutee</h3>
+                <img src="img/tutee.png">
+            </div>
+            <div id="parent" class="infoBox">
+                <h3>Parent</h3>
+                <img src="img/parent.png">
+            </div>
+        </div>
+
+        <!--Carousel-->
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/foto1.jpeg" alt="Foto 1" class="carouselPicture">
+                </div>
+
+                <div class="item">
+                    <img src="img/foto2.jpg" alt="Foto 2" class="carouselPicture">
+                </div>
+
+                <div class="item">
+                    <img src="img/foto3.jpg" alt="Foto 3" class="carouselPicture">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div id="homeTextDiv">
+            <span id="homeText1" class="homeText">“Het is leuk, want de tutor is lief en ze zorgt dat ik
 de leerstof beter begrijp en ze moedigt me aan,
 waardoor ik beter weet hoe het moet. En als je
 beter weet hoe het moet, maak je je huiswerk ook
 veel liever."</span>
 
-        <span id="homeText2" class="homeText">“Ik vind het goed dat de tutor steeds zegt
+            <span id="homeText2" class="homeText">“Ik vind het goed dat de tutor steeds zegt
 dat het niet erg is om een fout te maken en dat
 de sessies er zijn om te leren. Nu durf ik dat
 ook zeggen als ik iets niet begrijp.” </span>
 
-        <span class="homeText">“Ik heb geleerd om eerst in mijn agenda te kijken voor ik met
+            <span class="homeText">“Ik heb geleerd om eerst in mijn agenda te kijken voor ik met
 huiswerk start, want daarvoor las ik die soms niet zo goed. Ik wist
 niet hoe ik aan studeren moest beginnen, en mijn mentor heeft me
 daarbij geholpen.”</span>
 
-        <span class="homeText">“Mijn mentor is super! Ik kon
+            <span class="homeText">“Mijn mentor is super! Ik kon
 haar alles zeggen, als iets me
 niet afging.” </span>
+        </div>
+
+
     </div>
-
-
-    <!--Carousel-->
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="img/foto1.jpeg" alt="Foto 1" class="carouselPicture">
+    <div class="push" />
+    <div class="footer">
+        <div class="row">
+            <div class="col-sm-4 footercolumn">
+                Kolom 1
             </div>
-
-            <div class="item">
-                <img src="img/foto2.jpg" alt="Foto 2" class="carouselPicture">
+            <div class="col-sm-4 footercolumn">
+                Kolom 2
             </div>
-
-            <div class="item">
-                <img src="img/foto3.jpg" alt="Foto 3" class="carouselPicture">
+            <div class="col-sm-4 footercolumn">
+                Kolom 3
             </div>
         </div>
+        <p>
+            <br>Copyright (c) 2016</p>
     </div>
 
-    <div id="backgroundSite">
-        <h1 style="text-align: center">Vas-y</h1>
-    </div>
+
+
+
 
 
 
@@ -168,17 +220,21 @@ niet afging.” </span>
                     <form role="form">
                         <div class="form-group">
                             <label for="email">E-mail:</label>
-                            <input type="email" class="form-control" id="email" placeholder="Vul je e-mailadres in">
+                            <input type="email" class="form-control" id="email">
                         </div>
                         <div class="form-group">
                             <label for="pwd">Paswoord:</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Vul je paswoord in">
+                            <input type="password" class="form-control" id="password">
                         </div>
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox">Onthoud mij</label>
                         </div>
-                        <a href="dashboard" class="btn btn-default" role="button">Login</a>
+                        <input id="loginbtn" onclick="tryLogin()" type="button" name="loginInfo" value="Login" class="btn btn-default">
+                        <br>
+                        <p id="statusLogin"></p>
+
+                        <!--<button type="submit" class="btn btn-default">Login</button>-->
                     </form>
                 </div>
                 <div class="modal-footer">

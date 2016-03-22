@@ -31,6 +31,10 @@ if(isset($_POST["firstName"])){
 		        VALUES('$firstName','$lastName', '$gender', '$email', '$password_hash', '$school', '$ip',now(),now(),now())";
 		
         if(mysqli_query($db_conx, $sql)){
+            // Create directory(folder) to hold each user's files(pics, MP3s, etc.)
+            //if (!file_exists("user/$email")) {
+            //    mkdir("user/$email", 0755);
+            //}
             echo "signup_success";
         }
         else{

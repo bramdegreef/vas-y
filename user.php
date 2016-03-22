@@ -1,3 +1,43 @@
+<?php
+include_once("php_includes/check_login_status.php");
+// Initialize any variables that the page might echo
+$email = "";
+$joindate = "";
+$lastsession = "";
+// Make sure the _GET username is set, and sanitize it
+if(isset($_GET["email"])){
+	$email = $_GET['email'];
+} else {
+    header("location: http://vas-y.comlu.com");
+    exit();	
+}
+// Select the member from the users table
+$sql = "SELECT * FROM Leerlingen WHERE email='$email' LIMIT 1";
+$user_query = mysqli_query($db_conx, $sql);
+// Now make sure that user exists in the table
+$numrows = mysqli_num_rows($user_query);
+if($numrows < 1){
+	echo "That user does not exist or is not yet activated, press back";
+    exit();	
+}
+// Check to see if the viewer is the account owner
+$isOwner = "no";
+if($user_ok == true){
+	$isOwner = "yes";
+}
+// Fetch the user row from the query above
+while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
+	$profile_id = $row["id"];
+    $voornaam = $row["Voornaam"];
+    $familienaam = $row["Familienaam"];
+    $school = $row["School"];
+    $signup = $row["signup"];
+	$lastlogin = $row["lastlogin"];
+	$joindate = strftime("%b %d, %Y", strtotime($signup));
+	$lastsession = strftime("%b %d, %Y", strtotime($lastlogin));
+}
+?>
+
 <!doctype html>
 <html>
 
@@ -5,10 +45,10 @@
     <meta charset="UTF-8">
     <title>Vas-y</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/dashboard.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
     <script type="text/javascript">
         $("document").ready(function () {
             var right = document.getElementById('messagesDiv').style.height;
@@ -33,14 +73,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Vas-y</a>
+                <a class="navbar-brand" href="#">Vas-y</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right navbarDashboard">
-                    <li><a href="berichten.html"><span class="glyphicon glyphicon-envelope"></span> Berichten</a>
+                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Berichten</a>
                     </li>
                     <li>
-                        <a href="account.html"><img src="../img/user.png" class="img-circle" width="20" height="20"> Mijn account</a>
+                        <a href="#"><img src="../img/user.png" class="img-circle" width="20" height="20"> Mijn account</a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +90,6 @@
 
     <div class="row">
         <div class="col-sm-3" id="leftDash">
-            <h3 id="menuTitle">Menu:</h3>
             <ul id="menu">
                 <li><a href="#Overzicht">Overzicht</a></li>
                 <li><a href="#Bericht">Berichten</a></li>
@@ -66,8 +105,8 @@
 
             <div class="col-sm-3 pressedDiv" id="profileInfoDiv">
                 <img src="../img/user_student.png" class="img-circle" id="profilePic">
-                <p>Leerling X</p>
-                <p>School X</p>
+                <p>Leerling: <?php echo $voornaam; echo " "; echo $familienaam;?></p>
+                <p>School: <?php echo $school;?></p>
                 <p>Klas X</p>
             </div>
 
@@ -103,3 +142,23 @@
 </body>
 
 </html>
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title><?php echo $email; ?></title>
+</head>
+<body>
+  <h3>Account: <?php echo $email; ?></h3>
+    <p>ID: <?php echo $profile_id; ?></p>
+  <p>Is the viewer the page owner, logged in? <b><?php echo $isOwner; ?></b></p>
+  <p>Join Date: <?php echo $joindate; ?></p>
+  <p>Last Session: <?php echo $lastsession; ?></p>
+</div>
+</body>
+</html>
+-->

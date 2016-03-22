@@ -85,7 +85,8 @@ function tryLogin() {
                     _("loginbtn").style.display = "block";
                 } else {
                     _("loginbtn").style.display = "block";
-                    _("statusLogin").innerHTML = "Logged in succesfully";
+                    //_("statusLogin").innerHTML = "Logged in succesfully";
+                    window.location = "http://vas-y.comlu.com/user.php?email="+ajax.responseText;
                 }
             }
         }
@@ -96,39 +97,11 @@ function tryLogin() {
 function tryLogout() {
 
     $.ajax({
-        url: "http://guidrbru.net23.net/logout.php?logout=true",
+        url: "http://vas-y.comlu.com/logout.php?logout=true",
         type: "get",
         success: function (data) {
             if (data == "worked")
                 location.reload();
         }
     })
-}
-
-function checkusername() {
-    var u = _("usernameSignup").value;
-    if (u != "") {
-        _("unamestatus").innerHTML = 'checking ...';
-        var ajax = ajaxObj("POST", "http://guidrbru.net23.net/signup.php");
-        ajax.onreadystatechange = function () {
-            if (ajaxReturn(ajax) == true) {
-                _("unamestatus").innerHTML = ajax.responseText;
-            }
-        }
-        ajax.send("usernamecheck=" + u);
-    }
-}
-
-function checkemail() {
-    var e = _("emailSignup").value;
-    if (e != "") {
-        _("emailstatus").innerHTML = 'checking ...';
-        var ajax = ajaxObj("POST", "http://guidrbru.net23.net/signup.php");
-        ajax.onreadystatechange = function () {
-            if (ajaxReturn(ajax) == true) {
-                _("emailstatus").innerHTML = ajax.responseText;
-            }
-        }
-        ajax.send("emailcheck=" + e);
-    }
 }
