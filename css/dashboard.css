@@ -182,7 +182,7 @@ h3#menuTitle{
 }
 
 #messages tr th {
-    padding: 1.2em;
+    padding: 0.7em;
     background-color: #848484;
     border: solid 1px white;
 }
@@ -195,6 +195,7 @@ h3#menuTitle{
 #messages tr:nth-child(even) {
     background-color: #a2a0a0;
 }
+
 
 h2 {
     margin: 0;
