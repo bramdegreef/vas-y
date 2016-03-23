@@ -22,7 +22,7 @@ if($numrows < 1){
 }
 // Check to see if the viewer is the account owner
 $isOwner = "no";
-if($user_ok == true){
+if($user_ok == true && $email == $log_email){
 	$isOwner = "yes";
 }
 // Fetch the user row from the query above
@@ -47,6 +47,7 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/loginSignup.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
     <script type="text/javascript">
@@ -73,14 +74,18 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Vas-y</a>
+                <a class="navbar-brand" href="../index.html">Vas-y</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right navbarDashboard">
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Berichten</a>
+                    <li>
+                        <a href="dashboard/berichten.html"><span class="glyphicon glyphicon-envelope"></span> Berichten</a>
                     </li>
                     <li>
-                        <a href="#"><img src="../img/user.png" class="img-circle" width="20" height="20"> Mijn account</a>
+                        <a href="dashboard/account.html"><img src="../img/user.png" class="img-circle" width="20" height="20"> Mijn account</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="tryLogout()"><span class="glyphicon glyphicon-log-out"></span> Uitloggen</a>
                     </li>
                 </ul>
             </div>
@@ -105,9 +110,16 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
 
             <div class="col-sm-3 pressedDiv" id="profileInfoDiv">
                 <img src="../img/user_student.png" class="img-circle" id="profilePic">
-                <p>Leerling: <?php echo $voornaam; echo " "; echo $familienaam;?></p>
-                <p>School: <?php echo $school;?></p>
-                <p>Klas X</p>
+                <p>Leerling:
+                    <?php echo $voornaam; echo " "; echo $familienaam;?>
+                </p>
+                <p>School:
+                    <?php echo $school;?>
+                </p>
+                <!--<p>Klas X</p>-->
+                <p>Owner:
+                    <?php echo $isOwner;?>
+                </p>
             </div>
 
             <div class="pressedDiv rightPressedDiv col-sm-8" id="messagesDiv">
@@ -142,23 +154,3 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
 </body>
 
 </html>
-
-
-
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title><?php echo $email; ?></title>
-</head>
-<body>
-  <h3>Account: <?php echo $email; ?></h3>
-    <p>ID: <?php echo $profile_id; ?></p>
-  <p>Is the viewer the page owner, logged in? <b><?php echo $isOwner; ?></b></p>
-  <p>Join Date: <?php echo $joindate; ?></p>
-  <p>Last Session: <?php echo $lastsession; ?></p>
-</div>
-</body>
-</html>
--->

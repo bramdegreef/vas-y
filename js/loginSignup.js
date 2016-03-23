@@ -97,11 +97,10 @@ function tryLogin() {
 function tryLogout() {
 
     $.ajax({
-        url: "http://vas-y.comlu.com/logout.php?logout=true",
+        url: "http://vas-y.comlu.com/logout.php",
         type: "get",
         success: function (data) {
-            if (data == "worked")
-                location.reload();
+            window.location = "http://vas-y.comlu.com/";                
         }
     })
 }
