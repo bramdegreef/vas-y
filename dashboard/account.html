@@ -37,10 +37,13 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right navbarDashboard">
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Berichten</a>
+                    <li><a href="berichten.html"><span class="glyphicon glyphicon-envelope"></span> Berichten</a>
                     </li>
                     <li>
                         <a href="account.html"><img src="../img/user.png" class="img-circle" width="20" height="20"> Mijn account</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="tryLogout()"><span class="glyphicon glyphicon-log-out"></span> Uitloggen</a>
                     </li>
                 </ul>
             </div>
@@ -51,12 +54,10 @@
     <div class="row">
         <div class="col-sm-3" id="leftDash">
             <ul id="menu">
-                <li><a href="#Overzicht">Overzicht</a></li>
-                <li><a href="#Bericht">Berichten</a></li>
-                <li><a href="#Leerkracht">Leerkracht</a></li>
-                <li><a href="#Vak">Vakken</a></li>
-                <li><a href="#School">Scholen</a></li>
-                <li><a href="#Les">Lessen</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="berichten.html">Berichten</a></li>
+                <li><a href="leerkrachten.html">Leerkrachten</a></li>
+                <li><a href="#Afspraken">Jouw afspraken</a></li>
             </ul>
         </div>
 
@@ -64,7 +65,7 @@
             <h1>Account-instellingen:</h1>
 
             <div class="col-sm-11 pressedDiv">
-                <p><u>Profielfoto:</u> </p><img src="../img/user_student.png" <img src="../img/user_student.png" class="img-circle" id="profilePicInstellingen"><br><br><button>Pas profielfoto aan</button>
+                <p><u>Profielfoto:</u></p><img src="../img/user_student.png" class="img-circle" id="profilePicInstellingen"><br><br><button>Pas profielfoto aan</button>
             </div>
             
             <div class="col-sm-11 pressedDiv">

@@ -74,7 +74,7 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.html">Vas-y</a>
+                <a class="navbar-brand" href="index.html">Vas-y</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right navbarDashboard">
@@ -96,12 +96,10 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
     <div class="row">
         <div class="col-sm-3" id="leftDash">
             <ul id="menu">
-                <li><a href="#Overzicht">Overzicht</a></li>
-                <li><a href="#Bericht">Berichten</a></li>
-                <li><a href="#Leerkracht">Leerkracht</a></li>
-                <li><a href="#Vak">Vakken</a></li>
-                <li><a href="#School">Scholen</a></li>
-                <li><a href="#Les">Lessen</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="berichten.html">Berichten</a></li>
+                <li><a href="leerkrachten.html">Leerkrachten</a></li>
+                <li><a href="#Afspraken">Jouw afspraken</a></li>
             </ul>
         </div>
 

@@ -175,6 +175,75 @@ h3#menuTitle{
     margin-right: 0;
 }
 
+#messages{
+    width: 100%;
+    border: solid 2px gray;
+    border-collapse: collapse;
+}
+
+#messages tr th {
+    padding: 1.2em;
+    background-color: #848484;
+    border: solid 1px white;
+}
+
+#messages tr td {
+    padding: 1.05em;
+    border: solid 1px white;
+}
+
+#messages tr:nth-child(even) {
+    background-color: #a2a0a0;
+}
+
+h2 {
+    margin: 0;
+    color: white;
+}
+
+#leerkrachten {
+    border: solid 2px gray;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+    background-color: #adadad;
+}
+
+#leerkrachten tr td {
+    height: 10em;
+    border: solid 1px black;
+    padding: 10px;
+}
+
+#teacherFilter {
+    width: 100%;
+    border: solid 2px gray;
+    margin: 1em 1em 1em 0em;
+    border-collapse: collapse;
+}
+
+#teacherFilter tr td{
+    padding: 0.3em;
+    border: solid 1px gray;
+}
+
+#teacherFilter tr td input{
+    width: 100%;
+}
+
+#teacherFilter tr td select{
+    width: 100%;
+}
+
+#teacherFilter tr th{
+    text-align: center;
+    background-color: gray;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
 
 /*
 *
@@ -215,3 +284,4 @@ h3#menuTitle{
         width: 100%;
     }
 }
+

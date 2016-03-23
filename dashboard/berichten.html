@@ -42,6 +42,9 @@
                     <li>
                         <a href="account.html"><img src="../img/user.png" class="img-circle" width="20" height="20"> Mijn account</a>
                     </li>
+                    <li>
+                        <a href="#" onclick="tryLogout()"><span class="glyphicon glyphicon-log-out"></span> Uitloggen</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,24 +54,63 @@
     <div class="row">
         <div class="col-sm-3" id="leftDash">
             <ul id="menu">
-                <li><a href="#Overzicht">Overzicht</a></li>
-                <li><a href="#Bericht">Berichten</a></li>
-                <li><a href="#Leerkracht">Leerkracht</a></li>
-                <li><a href="#Vak">Vakken</a></li>
-                <li><a href="#School">Scholen</a></li>
-                <li><a href="#Les">Lessen</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="berichten.html">Berichten</a></li>
+                <li><a href="leerkrachten.html">Leerkrachten</a></li>
+                <li><a href="#Afspraken">Jouw afspraken</a></li>
             </ul>
         </div>
 
         <div class="col-sm-8" id="rightDash">
-            <h1>Jouw berichten:</h1>
             
             <div class="pressedDiv rightPressedDiv col-sm-11" id="messagesDiv">
-                <b> Berichten</b> <span class="glyphicon glyphicon-envelope"></span>
-                <br>
-                <div id="messagesBox">
-                    Je hebt geen nieuwe berichten
-                </div>
+                <h2>Berichten:</h2>
+                
+                <button>Stuur een nieuw bericht</button>
+                <input type="text" id="messageFilter" style="float: right;"><button style="float: right;">Zoek</button>
+                <br><br>
+                <table id="messages">
+                    <tr>
+                        <th> Van </th>
+                        <th> Onderwerp </th>
+                        <th> Datum </th>
+                    </tr>
+                    <tr>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                </table>
             </div>
 
         </div>
