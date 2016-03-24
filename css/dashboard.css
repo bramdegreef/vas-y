@@ -23,6 +23,10 @@ h1 {
     margin: 0;
 }
 
+.infoAccount{
+    float: right;
+}
+
 .modal-dialog {
     margin-top: 80px;
 }

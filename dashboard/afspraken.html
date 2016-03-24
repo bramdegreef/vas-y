@@ -57,32 +57,56 @@
                 <li><a href="index.html">Dashboard</a></li>
                 <li><a href="berichten.html">Berichten</a></li>
                 <li><a href="leerkrachten.html">Leerkrachten</a></li>
-                <li><a href="afspraken.html">Jouw afspraken</a></li>
+                <li><a href="#">Jouw afspraken</a></li>
             </ul>
         </div>
 
         <div class="col-sm-8" id="rightDash">
-            <h1>Account-instellingen:</h1>
+           <div class="pressedDiv rightPressedDiv col-sm-11" id="messagesDiv">
+            <h2>Overzicht afspraken</h2>
 
-            <div class="col-sm-11 pressedDiv">
-                <p><u>Profielfoto:</u></p><img src="../img/user_student.png" class="img-circle" id="profilePicInstellingen"><br><br><button>Pas profielfoto aan</button>    
-                <br> <br> <br> <br>
-                <div clas="infoAccount">
-                <p> Naam: X</p>
-                <p> School: X</p>
-                <p> Info: X</p>
-                    </div>
+              
+                
+                <button>Toon vorige/voorbije/gemiste afspraken</button>
+                <input type="text" id="messageFilter" style="float: right;"><button style="float: right;">Zoek afspraak</button>
+                <br><br>
+                <table id="messages">
+                    <tr>
+                        <th> Waar </th>
+                        <th> Met wie</th>
+                        <th> Onderwerp </th>
+                        <th> Datum </th>
+                    </tr>
+                    <tr>
+                        <td> Aarde</td>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Aarde</td>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Aarde</td>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                    <tr>
+                        <td> Aarde</td>
+                        <td> Leerkracht 1 </td>
+                        <td> Taak inleveren tegen... </td>
+                        <td> 23 April 2016 14:36</td>
+                    </tr>
+                 
+                </table>
             </div>
-            
-            <div class="col-sm-11 pressedDiv">
-                <p><u>Email:</u> </p><span id="email-adres"><b>voorbeeldemail@hotmail.com</b></span><button class="float-right">Pas e-mail aan</button>
-            </div>
-            
-            <div class="col-sm-11 pressedDiv">
-                <p><u>Wachtwoord:</u> </p><b>********</b><button class="float-right">Pas wachtwoord aan</button>
-            </div>            
+             </div>
 
-        </div>
+        
     </div>
 
 
