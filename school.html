@@ -31,10 +31,10 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="leerling.html">Info voor ouders</a></li>
-                    <li><a href="ouders.html">Info voor leerlingen</a></li>
-
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="ouders.html">Info voor ouders</a></li>
+                    <li><a href="leerling.html">Info voor leerlingen</a></li>
+                    <li><a href="leerkracht.html">Info voor leerkrachten</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-user"></span> Login</a></li>
@@ -59,7 +59,114 @@ Regina Pacisinstituut<br>
 
 
 
+  <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="formTitle">Login:</span>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Paswoord:</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">Onthoud mij</label>
+                        </div>
+                        <input id="loginbtn" onclick="tryLogin()" type="button" name="loginInfo" value="Login" class="btn btn-default">
+                        <br>
+                        <p id="statusLogin"></p>
+
+                        <!--<button type="submit" class="btn btn-default">Login</button>-->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluit venster</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="signupModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="formTitle">Nieuwe account:</span>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="email">Voornaam:</label>
+                            <input type="text" class="form-control" id="firstnameSignup" placeholder="Vul je voornaam in">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Familienaam:</label>
+                            <input type="text" class="form-control" id="lastnameSignup" placeholder="Vul je familienaam in">
+                        </div>
+                        <div class="form-group">
+                            <label>Geslacht:</label>
+                            <br>
+                            <label class="radio-inline">
+                                <input type="radio" name="geslacht" id="Man">Man
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="geslacht" id="Vrouw">Vrouw
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" class="form-control" id="emailSignup" placeholder="Vul je e-mailadres in">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Paswoord:</label>
+                            <input type="password" class="form-control" id="passwordSignup" placeholder="Vul je paswoord in">
+                        </div>
+                        <div class="form-group">
+                            <label for="school">School:</label>
+                            <select id="schoolSignup">
+                                <option selected hidden>Kies een school</option>
+                                <option value="School1">School 1</option>
+                                <option value="School2">School 2</option>
+                                <option value="School3">School 3</option>
+                                <option value="School4">School 4</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="checkbox" id="leerkrachtCheckbox">
+                            <label for="leerkrachtCheckbox"> Ik ben leerkracht</label>
+                            <div id="leerkrachtOption">
+                                <div class="form-group">
+                                    Vul de code voor leerkrachten in:
+                                    <br>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" id="signupbtn" onclick="signup(); return false" class="btn btn-default btn-success" value="Maak een nieuwe account" />
+                        <p id="statusSignup"></p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluit venster</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 
