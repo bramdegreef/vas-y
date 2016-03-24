@@ -54,6 +54,12 @@ h3{
 #myCarousel img {
     left: 50%
 }
+#leerling {
+    color: white;
+    text-align: center;
+    display: block;
+   
+}
 
 #signup-form {
     z-index: 9999;

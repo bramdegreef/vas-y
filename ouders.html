@@ -6,13 +6,41 @@
     <title>Vas-y</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    
     <script src="js/bootstrap.js"></script>
     <script src="js/loginSignup.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/index3.css" rel="stylesheet">
 
-    <script>
-      
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            /**Fade in home texts**/
+            $(".homeText").css("display", "none");
+
+            var quotes = $(".homeText");
+            var quoteIndex = -1;
+
+            function showNextQuote() {
+                ++quoteIndex;
+                quotes.eq(quoteIndex % quotes.length)
+                    .fadeIn(1000)
+                    .delay(8000)
+                    .fadeOut(1000, showNextQuote);
+            }
+            showNextQuote();
+
+
+            /**Leerkrachtoptie wordt aangevinkt**/
+            $("#leerkrachtCheckbox").change(function () {
+                if (this.checked) {
+                    $("#leerkrachtOption").slideDown();
+                } else {
+                    $("#leerkrachtOption").slideUp();
+                }
+            });
+
+        });
     </script>
 </head>
 
@@ -32,10 +60,12 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                   <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="#">Info voor ouders</a></li>
-                    <li><a href="leerling.html">Info voor leerlingen</a></li>
-                    <li><a href="leerkracht.html">Info voor leerkrachten</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="leerling.html">Leerling</a></li>
+                    <li><a href="#">Ouder</a></li>
+                    <li><a href="leerkracht.html">Leerkrachten/Tutoren</a></li>
+                    <li><a href="school.html">Scholen</a></li>
+                    <li><a href="medewerker.html">Medewerker</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -45,7 +75,9 @@
             </div>
         </div>
     </nav>
-
+<div class="container">
+    <h1 style="text-align: center">Ouders</h1>
+    <p class="margin-sides">
 Het begeleidingsprogramma Vas-y wordt in onze school georganiseerd. <br>
 Dit project is een initiatief van de hogeschool Odisee Campus Brussel en wordt gesubsidieerd door het Departement Onderwijs en vorming.<br><br>
 
@@ -58,11 +90,17 @@ Leerlingen nemen vrijwillig deel, maar houden zich aan de afspraak telkens aanwe
 Concreet betekent dit dat de leerlingen en de studenten zes keer anderhalf uur samenkomen. 
 De begeleidingssessies zullen doorgaan op school zelf en na de schooluren.
 
-Vas-y, we gaan voor onze talenten, versterken elkaar en gaan samen uitdagingen aan!
+Vas-y, we gaan voor onze talenten, versterken elkaar en gaan samen uitdagingen aan!<br><br><br>
+    
+   
+    </p>
+    </div>
+    
+
 
     
     
-    <div class="modal fade" id="loginModal" role="dialog">
+   <div class="modal fade" id="loginModal" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -170,7 +208,6 @@ Vas-y, we gaan voor onze talenten, versterken elkaar en gaan samen uitdagingen a
 
         </div>
     </div>
-    
 </body>
 
 </html>
