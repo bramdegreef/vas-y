@@ -2,7 +2,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    color: black;
+    color: yellow;
     background-color: rgb(45, 45, 45);
 }
 
@@ -59,6 +59,11 @@ h1 {
 
 #leerkrachtOption {
     display: none;
+}
+
+#leerling {
+    color: white;
+    background-color: darkgrey;
 }
 
 .modal-dialog {
