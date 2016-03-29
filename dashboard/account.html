@@ -75,12 +75,76 @@
             </div>
             
             <div class="col-sm-11 pressedDiv">
-                <p><u>Email:</u> </p><span id="email-adres"><b>voorbeeldemail@hotmail.com</b></span><button class="float-right">Pas e-mail aan</button>
-            </div>
+                <p><u>Email:</u> </p><span id="email-adres"><b>voorbeeldemail@hotmail.com</b></span>
+                <button data-toggle="modal" data-target="#emailModal" class="float-right">Pas e-mail aan</button>
+               
+                
+                <div class="modal fade" id="emailModal" role="dialog">
+                    <div class="modal-dialog">
+
+                
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <span id="formTitle">Emailadres:</span>
+                            </div>
+                          
+                          <div class="modal-body">
+                                        <form role="form">
+                                                <div class="form-group">
+                                                    <label for="email">Oud emailadres:</label>
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email1">Nieuw emailadres:</label>
+                                                    <input type="email" class="form-control" id="email1">
+                                                </div>
+                                            </form>
+                                </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+             </div>
+             
+            
+           
             
             <div class="col-sm-11 pressedDiv">
-                <p><u>Wachtwoord:</u> </p><b>********</b><button class="float-right">Pas wachtwoord aan</button>
-            </div>            
+                <p><u>Wachtwoord:</u> </p><b>********</b>
+                <button data-toggle="modal" data-target="#paswoordModal"  class="float-right">Pas wachtwoord aan</button>
+            </div>     
+            
+            <div class="modal fade" id="paswoordModal" role="dialog">
+                    <div class="modal-dialog">
+
+                
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <span id="formTitle">Wachtwood:</span>
+                            </div>
+                          
+                          <div class="modal-body">
+                                        <form role="form">
+                                                <div class="form-group">
+                                                    <label for="wachtwoord">Oud wachtwoord:</label>
+                                                    <input type="text" class="form-control" id="wachtwoord">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="wachtwoord1">Nieuw wachtwoord:</label>
+                                                    <input type="text" class="form-control" id="wachtwoord1">
+                                                </div>
+                                            </form>
+                                </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+             </div>
+             
 
         </div>
     </div>
